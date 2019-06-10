@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SearchField from "./../components/SearchField";
 import DataLoader from "./../components/DataLoader";
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class App extends Component {
       <h1>Loading...</h1>
     ) : (
       <div>
-        <h1 style={{ color: "#550000", fontSize: "3rem" }}>API Testing</h1>
+        <h1>API Testing</h1>
         <SearchField key="searchField" changeEvent={this.onSearchFieldChange} />
         <DataLoader
           key="dataLoader"
