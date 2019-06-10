@@ -1,5 +1,7 @@
 .card {
+    box-sizing: border-box;
     margin: 1rem;
+    padding: .3rem;
     display: flex;
     flex-flow: column wrap;
     align-items: center;

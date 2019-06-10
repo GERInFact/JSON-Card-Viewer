@@ -10,7 +10,7 @@ class DataCard extends Component {
     return Object.keys(this.props.data).map(k => {
       return (
         <p key={Math.random()}>
-          {String(k).toUpperCase()}: {this.props.data[k]}
+          <strong>{String(k).toUpperCase()}:</strong> {this.props.data[k]}
         </p>
       );
     });
