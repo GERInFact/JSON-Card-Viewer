@@ -32,7 +32,7 @@ class App extends Component {
   render() {
     return Array.isArray(this.state.dataSet) ? (
       <div>
-        <h1>API Testing</h1>
+        <h1>JSON Card Viewer</h1>
         <UrlField urlFieldChanged={this.onUrlFieldChanged} />
         <SearchField key="searchField" changeEvent={this.onSearchFieldChange} />
         <DataLoader
