@@ -11,11 +11,11 @@ class App extends Component {
     this.onSearchFieldChange = event => {
       this.setState({ searchField: event.target.value });
     };
-    this.onUrlFieldChanged = event => {
+    this.onUrlFieldChanged = async event => {
       this.setState({ url: event.target.value });
       if (event.keyCode !== 13) return;
 
-      this.getData();
+      await this.getData();
     };
   }
 
