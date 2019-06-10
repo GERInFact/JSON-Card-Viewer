@@ -28,14 +28,16 @@ class App extends Component {
   }
 
   render() {
-    return (
+    return !this.state.dataSet.length ? (
+      <h1>Loading...</h1>
+    ) : (
       <div>
         <h1 style={{ color: "#550000", fontSize: "3rem" }}>API Testing</h1>
         <SearchField key="searchField" changeEvent={this.onSearchFieldChange} />
         <DataLoader
           key="dataLoader"
           dataSet={this.state.dataSet.filter(d =>
-            String(Object.values(d)).includes(
+            String(Object.values(d)).toLowerCase().includes(
               this.state.searchField.toLowerCase()
             )
           )}
